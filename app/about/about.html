@@ -1,0 +1,10 @@
+<div ng-controller="AboutCtrl" ng-init="doc">
+    Doctors:
+    <!--{{doc}}-->
+    <ul>
+        <li class="col-xs-4 col-md-4" ng-repeat= "d in doc">
+                <h4>{{d.specialist | capitalize}}</h4>
+                {{d.first_name+" "+d.last_name}}
+        </li>
+    </ul>
+</div>
