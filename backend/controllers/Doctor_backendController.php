@@ -8,7 +8,7 @@ use yii\filters\Cors;
 
 class Doctor_backendController extends ActiveController
 {
-    public $modelClass = 'app\models\Doctors';
+    public $modelClass = 'app\models\Doctor';
 
     public function behaviors()
     {

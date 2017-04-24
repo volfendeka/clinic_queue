@@ -8,4 +8,4 @@ var app = angular.module("app", [
         'contact',
         'consultation'
     ]);
-var serviceBase = 'http://clinic_front.loc/backend/web/';
+var serviceBase = 'http://clinic_backend.loc/';

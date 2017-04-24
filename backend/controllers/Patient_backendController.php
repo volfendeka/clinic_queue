@@ -3,14 +3,14 @@
 
 namespace app\controllers;
 
-use app\models\Patients;
+use app\models\Patient;
 use yii\rest\ActiveController;
 use yii\helpers\ArrayHelper;
 use yii\filters\Cors;
 
 class Patient_backendController extends ActiveController
 {
-    public $modelClass = 'app\models\Patients';
+    public $modelClass = 'app\models\Patient';
 
     public function behaviors()
     {
@@ -24,6 +24,6 @@ class Patient_backendController extends ActiveController
 
     public function actionView($id)
     {
-        return Patients::findOne($id);
+        return Patient::findOne($id);
     }
 }
