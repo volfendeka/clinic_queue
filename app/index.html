@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html ng-app="app">
-<title>Clinic</title>
-<script>
-    document.write('<base href="' + document.location + '" />');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clinic</title>
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link rel="stylesheet" href="vendor/bower/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/default.css">
+    <script src="vendor/bower/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bower/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="vendor/bower/angular/angular.js"></script>
+    <script src="vendor/bower/angular-route/angular-route.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWzB6FqsUCMivyNA6M0vt5k_WElSd0TFc"></script>
 
-<body>
+    <body>
 
-<div class="container">
-
-    <div class="navbar">
-        <ul class="nav navbar-nav" ng-controller="navBar">
-            <li ng-class="navClass('home')"><a href='#/home'>Home</a></li>
-            <li ng-class="navClass('about')"><a href='#/about'>About Us</a></li>
-            <li ng-class="navClass('contact')"><a href='#/contact'>Contact Us</a></li>
-            <li ng-class="navClass('consultation')"><a href='#/consultation'>Consultation</a></li>
-        </ul>
+        <div class="container">
+            <div class="navbar">
+                <ul class="nav navbar-nav" ng-controller="navBar">
+                    <li ng-class="navClass('home')"><a href='#/home'>Home</a></li>
+                    <li ng-class="navClass('about')"><a href='#/about'>About Us</a></li>
+                    <li ng-class="navClass('contact')"><a href='#/contact'>Contact Us</a></li>
+                    <li ng-class="navClass('consultation')"><a href='#/consultation'>Consultation</a></li>
+                </ul>
+        </div>
     </div>
-</div>
 
-<div ng-view> </div>
+    <div ng-view> </div>
 
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
 
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-
-</footer>
+    </footer>
 
 </body>
+
+
 <script src="app.module.js"></script>
-<script src="data.service.js"></script>
+<script src="services/data.service.js"></script>
+<script src="services/map.service.js"></script>
 <script src="home/home.controller.js"></script>
 <script src="about/about.controller.js"></script>
 <script src="contact/contact.controller.js"></script>

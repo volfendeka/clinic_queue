@@ -1,4 +1,6 @@
 angular.module("contact", [])
-    .controller('ContactCtrl', function($scope, $compile) {
+    .controller('ContactCtrl', ['$scope', 'map', function($scope, map) {
         console.log('inside contact controller');
-    });
+        map.init();
+    }]);
+

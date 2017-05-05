@@ -1,10 +1,11 @@
 <div ng-controller="AboutCtrl" ng-init="doc">
-    Doctors:
-    <!--{{doc}}-->
-    <ul>
-        <li class="col-xs-4 col-md-4" ng-repeat= "d in doc">
-                <h4>{{d.specialist | capitalize}}</h4>
-                {{d.first_name+" "+d.last_name}}
+    <p><h3>Лікарі:</h3></p>
+
+    <ul class="col-xs-4 col-md-4" ng-repeat="(key, value) in doc | groupBy: 'specialist'">
+        <h4>{{key | capitalize}}</h4>
+        <li ng-repeat="d in value">
+            {{d.first_name+" "+d.last_name}}
         </li>
     </ul>
+
 </div>

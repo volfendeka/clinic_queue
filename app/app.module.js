@@ -6,6 +6,7 @@ var app = angular.module("app", [
         'home',
         'about',
         'contact',
-        'consultation'
+        'consultation',
+        'GoogleApi',
     ]);
 var serviceBase = 'http://clinic_backend.loc/';
