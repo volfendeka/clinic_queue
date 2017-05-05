@@ -1,5 +1,6 @@
 # phpstorm project files
 .idea
+.idea/workspace.xml
 
 # netbeans project files
 nbproject
@@ -13,7 +14,7 @@ nbproject
 Thumbs.db
 
 # composer vendor dir
-/vendor
+/app/vendor
 
 # composer itself is not needed
 composer.phar
