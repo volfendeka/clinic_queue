@@ -11,6 +11,9 @@ use Yii;
  * @property string $first_name
  * @property string $last_name
  * @property string $specialist
+ *
+ * @property Meeting[] $meetings
+ * @property Patient[] $patients
  */
 class Doctor extends \yii\db\ActiveRecord
 {
@@ -45,5 +48,21 @@ class Doctor extends \yii\db\ActiveRecord
             'last_name' => 'Last Name',
             'specialist' => 'Specialist',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMeetings()
+    {
+        return $this->hasMany(Meeting::className(), ['doctor_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPatients()
+    {
+        return $this->hasMany(Patient::className(), ['family_doctor' => 'id']);
     }
 }

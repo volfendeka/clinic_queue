@@ -24,6 +24,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'building')->textInput() ?>
 
+    <?= $form->field($model, 'family_doctor')->textInput() ?>
+
     <?= $form->field($model, 'conversation_id')->textInput() ?>
 
     <div class="form-group">

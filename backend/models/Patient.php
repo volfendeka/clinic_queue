@@ -9,12 +9,16 @@ use Yii;
  *
  * @property integer $id
  * @property string $first_name
- * @property integer $last_name
+ * @property string $last_name
  * @property integer $age
  * @property string $city
  * @property string $street
  * @property integer $building
+ * @property integer $family_doctor
  * @property integer $conversation_id
+ *
+ * @property Meeting[] $meetings
+ * @property Doctor $familyDoctor
  */
 class Patient extends \yii\db\ActiveRecord
 {
@@ -33,9 +37,10 @@ class Patient extends \yii\db\ActiveRecord
     {
         return [
             [['first_name', 'last_name', 'age', 'city', 'street', 'building', 'conversation_id'], 'required'],
-            [['last_name', 'age', 'building', 'conversation_id'], 'integer'],
-            [['first_name'], 'string', 'max' => 30],
+            [['age', 'building', 'family_doctor', 'conversation_id'], 'integer'],
+            [['first_name', 'last_name'], 'string', 'max' => 30],
             [['city', 'street'], 'string', 'max' => 50],
+            [['family_doctor'], 'exist', 'skipOnError' => true, 'targetClass' => Doctor::className(), 'targetAttribute' => ['family_doctor' => 'id']],
         ];
     }
 
@@ -52,7 +57,24 @@ class Patient extends \yii\db\ActiveRecord
             'city' => 'City',
             'street' => 'Street',
             'building' => 'Building',
+            'family_doctor' => 'Family Doctor',
             'conversation_id' => 'Conversation ID',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMeetings()
+    {
+        return $this->hasMany(Meeting::className(), ['patient_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getFamilyDoctor()
+    {
+        return $this->hasOne(Doctor::className(), ['id' => 'family_doctor']);
     }
 }

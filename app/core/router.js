@@ -4,10 +4,10 @@ angular.module("router", ["ngRoute"])
 
         $routeProvider
             .when('/home',
-            {
-                templateUrl:    'home/home.html',
-                controller:     'HomeCtrl'
-            })
+                {
+                    templateUrl:    'home/home.html',
+                    controller:     'HomeCtrl'
+                })
             .when('/about',
                 {
                     templateUrl:    'about/about.html',

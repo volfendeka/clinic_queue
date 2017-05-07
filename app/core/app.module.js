@@ -1,5 +1,5 @@
-
 'use strict';
+
 var app = angular.module("app", [
         "router",
         'backend_data',
@@ -8,5 +8,8 @@ var app = angular.module("app", [
         'contact',
         'consultation',
         'GoogleApi',
-    ]);
-var serviceBase = 'http://clinic_backend.loc/';
+    ])
+    .controller('AppCtrl', function () {
+        
+    });
+

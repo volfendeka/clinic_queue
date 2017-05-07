@@ -2,10 +2,10 @@
 
 angular.module('GoogleApi', ['ngRoute'])
     .service('map', function() {
-        this.init = function () {
+        this.init = function (lat, lng) {
             var options = {
-                lat: 49.54987,
-                lng: 25.5941
+                lat: lat,
+                lng: lng
             };
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 15,

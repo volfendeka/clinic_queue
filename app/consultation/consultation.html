@@ -1,17 +1,75 @@
-<div ng-controller="ConsultationCtrl">
-
+{{meetings}}
+{{meeting}}
     <div class="container">
         <h3>Запит на консультацію:</h3>
-        <form>
+        <form role="form" name="request" method="post">
             <div class="form-group">
-                <label for="doctor">Лікар</label>
-                <input type="text" class="form-control" id="doctor">
-            </div>
-            <div class="form-group">
+                <label for="doctor_id">Лікар</label>
+                <div>
+                    <input name="doctor_id" ng-model="meeting.doctor_id" type="text" class="form-control" id="doctor_id" required>
+                    <span ng-show="request.doctor_id.$dirty && request.doctor_id.$invalid" class="help-inline">Doctor required</span>
+                </div>
+
+                <label for="patient_id">Patient</label>
+                <div>
+                    <input name="patient_id" ng-model="meeting.patient_id" type="text" class="form-control" id="patient_id" required>
+                    <span ng-show="request.patient_id.$dirty && request.patient_id.$invalid" class="help-inline">Patient required</span>
+                </div>
+
+                <label for="date_time_meeting">Time</label>
+                <div>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" id="date_time_meeting" role="button" data-toggle="dropdown">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                                <input type="text" class="form-control" data-ng-model="meeting.date_time_meeting">
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <datetimepicker data-ng-model="meeting.date_time_meeting"
+                                            data-datetimepicker-config="{
+                                                dropdownSelector: '#date_time_meeting',
+                                                modelType: 'YYYY-MM-DD HH-MM-SS' }"/>
+                        </ul>
+                    </div>
+                </div>
+
                 <label for="reason">Короткий опис причини</label>
-                <input type="text" class="form-control" id="reason">
+                <div>
+                    <input name="reason" ng-model="meeting.reason" type="textarea" class="form-control" id="reason" required>
+                    <span ng-show="request.reason.$dirty && request.reason.$invalid" class="help-inline">Reason required</span>
+                </div>
             </div>
-            <button type="submit" class="btn btn-default">Відправити</button>
+
+            <a href="#/home" class="btn btn-default">Cancel</a>
+            <button ng-click="createMeeting(meeting);" type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>
+
+
+<div class="dropdown form-group dropdown-start-parent">
+    <a class="dropdown-toggle" id="dropdownStart" role="button" data-toggle="dropdown" data-target=".dropdown-start-parent">
+        <input type="text" class="form-control" data-ng-model="dateRangeStart">
+    </a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        <datetimepicker data-ng-model="dateRangeStart"
+                        data-datetimepicker-config="{ dropdownSelector: '#dropdownStart', renderOn: 'end-date-changed' }"
+                        data-on-set-time="startDateOnSetTime()"
+                        data-before-render="startDateBeforeRender($dates)"></datetimepicker>
+    </ul>
 </div>
+
+<div class="dropdown form-group dropdown-end-parent">
+    <a class="dropdown-toggle" id="dropdownEnd" role="button" data-toggle="dropdown" data-target=".dropdown-end-parent">
+        <input type="text" class="form-control" data-ng-model="dateRangeEnd">
+    </a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        <datetimepicker data-ng-model="dateRangeEnd"
+                        data-datetimepicker-config="{ dropdownSelector: '#dropdownEnd', renderOn: 'start-date-changed' }"
+                        data-on-set-time="endDateOnSetTime()"
+                        data-before-render="endDateBeforeRender($view, $dates, $leftDate, $upDate, $rightDate)"></datetimepicker>
+    </ul>
+</div>
+
