@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="navbar">
+        <ul class="nav navbar-nav navbar-right" ng-controller="navigation">
+            <li data-match-route="home"><a href='#/home'>Home</a></li>
+            <li data-match-route="about"><a href='#/about'>About</a></li>
+            <li data-match-route="contact"><a href='#/contact'>Contact</a></li>
+            <li data-match-route="consultation" ng-show="loggedIn()" class="ng-hide"><a href='#/consultation'>Consultation</a></li>
+            <li ng-class="{active:isActive('/logout')}" ng-show="loggedIn()" ng-click="logout()"  class="ng-hide"><a href="">Logout</a></li>
+            <li data-match-route="#/login" ng-hide="loggedIn()"><a href="#/login">Login</a></li>
+            <li data-match-route="register" ng-hide="loggedIn()"><a href='#/register'>Register</a></li>
+        </ul>
+    </div>
+</div>

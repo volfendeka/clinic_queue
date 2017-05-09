@@ -10,6 +10,8 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '1-yjGBjn8M4Z-hP8G7QBRYQYza8zKOXI',
+            'class' => '\yii\web\Request',
+            'enableCookieValidation' => false,
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
             ],
@@ -20,6 +22,8 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            //'enableSession' => false,
+            'loginUrl' => null,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

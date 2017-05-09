@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('backend_data', ['ngRoute'])
+angular.module('backend_data', [])
     .service("data", ['$http','$location','$route', function($http) {
 
-            this.getData = function(controller_name) {
-                return $http.get(configs.serviceBack + controller_name);
+            this.getData = function(controller_name, get) {
+                return $http.get(configs.serviceBack + controller_name, get);
             },
             this.postData = function(controller_name, post) {
                 return $http.post(configs.serviceBack + controller_name, post)

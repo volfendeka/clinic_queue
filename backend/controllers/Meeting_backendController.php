@@ -3,16 +3,20 @@
 namespace app\controllers;
 
 use app\models\Doctor;
+use app\models\Meeting;
+use yii\web\Response;
+use yii\filters\auth\HttpBearerAuth;
+use yii\filters\ContentNegotiator;
 use yii\rest\ActiveController;
-use yii\helpers\ArrayHelper;
 use yii\filters\Cors;
 use yii\filters\AccessControl;
-use yii\helpers\Url;
-use yii\filters\VerbFilter;
+use Yii;
 
 class Meeting_backendController extends ActiveController
 {
+
     public $modelClass = 'app\models\Meeting';
+
 
     public function behaviors()
     {
@@ -20,26 +24,58 @@ class Meeting_backendController extends ActiveController
 
         $behaviors['corsFilter'] = [
             'class' => Cors::className(),
-            'cors' => [
-                // restrict access to
-                /*
-                'Origin' => ['http://clinic_queue.loc', Url::base()],
-                'Access-Control-Request-Methods' => ['GET', 'POST', 'OPTIONS', 'DELETE', 'PUT'],
-                'Access-Control-Request-Headers' => ['*'],
-                'Access-Control-Request-Credentials' => ['*'],
-                'Access-Control-Max-Age' => [ 1728000 ],
-                "Content-Length" => [0],
-                "Content-Type" => ['text/plain'],
-                */
+        ];
+
+        $behaviors['access'] = [
+            'only' => ['doctors', 'specialists', 'doctor_times'],
+            'class' => AccessControl::className(),
+            'rules' => [
+                [
+                    'actions' => ['logout', 'error', 'login'],
+                    'allow' => false,
+                    'roles' => ['?'],
+                ],
+                [
+                    'actions' => ['index', 'logout', 'error', 'login', 'doctors', 'specialists', 'doctor_times'],
+                    'allow' => true,
+                    'roles' => ['@'],
+                ],
+            ],
+        ];
+
+        $behaviors['authenticator'] = [
+            'class' => HttpBearerAuth::className(),
+            'only' => ['doctors', 'specialists', 'doctor_times'],
+        ];
+        $behaviors['contentNegotiator'] = [
+            'class' => ContentNegotiator::className(),
+            'formats' => [
+                'application/json' => Response::FORMAT_JSON,
             ],
         ];
 
         return $behaviors;
-
     }
 
-    public function actionDocs(){
-        return Doctor::find()->all();
+    public function actionDashboard()
+    {
+        $response = [
+            'username' => Yii::$app->user->identity->username,
+            'access_token' => Yii::$app->user->identity->getAuthKey(),
+        ];
+        return $response;
+    }
+
+    public function actionDoctors($specialist = ''){
+        return $specialist ? Doctor::find()->where(['specialist' => $specialist])->all()
+                            :Doctor::find()->all();
+    }
+
+    public function actionSpecialists(){
+        return Doctor::find()->select('specialist')->distinct()->all();
+    }
+    public function actionDoctor_times($id){
+        return Meeting::find()->select('date_time_meeting')->where(['doctor_id'=>$id])->all();
     }
 
 }

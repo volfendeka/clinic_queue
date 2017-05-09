@@ -4,6 +4,5 @@ angular.module("about", ['filters'])
         console.log('inside about controller');
         data.getData('doctor_backend').then(function(data){
             $scope.doc = data.data;
-            console.log($scope.doc);
         })
     }]);

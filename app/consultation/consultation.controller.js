@@ -1,61 +1,71 @@
 
 angular.module("consultation", ['ui.bootstrap.datetimepicker'])
     .controller('ConsultationCtrl', ['$scope', '$http', 'data', function($scope, $http, data) {
-        console.log('inside consultation controller');
-        data.getData('meeting_backend/').then(function(data){
-            $scope.meetings = data.data;
-            console.log($scope.meetings);
+        console.log(moment().format('HH:mm'))
+        var urls = {
+                get_doctors: 'meeting_backend/doctors/',
+            get_specialists: 'meeting_backend/specialists/',
+            create_meeting: 'meeting_backend/create/',
+        }
+
+        data.getData(urls.get_specialists).then(function(data){
+            $scope.profecionals = data.data;
+            console.log($scope.profecionals);
         });
 
+        data.getData(urls.get_doctors).then(function(data){
+            $scope.doctors = data.data;
+            console.log($scope.doctors);
+        });
+
+        $scope.onSpecialistSet = function(){
+            data.getData(urls.get_doctors, {params:{specialist:$scope.specialist}}).then(function(data){
+                $scope.doctors = data.data;
+                dateOnSetTime();
+            });
+        }
+
+        $scope.onDoctortSet = function(){
+            console.log($scope.doctor);
+        }
+
         $scope.createMeeting = function(meeting) {
-            console.log('create');
-            data.postData('meeting_backend/create/', meeting).then(function () {
+            data.postData(urls.create_meeting, meeting).then(function () {
                 console.log('createdddd');
             })
         };
 
-        $scope.onTimeSet = function (newDate, oldDate) {
-            console.log(newDate);
-            console.log(oldDate);
+
+
+
+        $scope.dateBeforeRender = dateBeforeRender
+
+        function dateOnSetTime () {
+            $scope.$broadcast('date-changed');
         }
 
+        function dateBeforeRender ($dates) {
+            var url = 'meeting_backend/doctor_times/?id=1';
+            data.getData(url).then(function(data){
+                //console.log(data.data);
+                var booked_dates = data.data;
+                if (booked_dates) {
+                    var booked_times = [];
+                    booked_dates.forEach(function (single_date) {
+                        booked_times.push(moment(single_date.date_time_meeting))
+                    })
+                    disable($dates, booked_times)
+                }
+            });
 
-        $scope.endDateBeforeRender = endDateBeforeRender
-        $scope.endDateOnSetTime = endDateOnSetTime
-        $scope.startDateBeforeRender = startDateBeforeRender
-        $scope.startDateOnSetTime = startDateOnSetTime
-
-        function startDateOnSetTime () {
-            $scope.$broadcast('start-date-changed');
         }
-
-        function endDateOnSetTime () {
-            $scope.$broadcast('end-date-changed');
-        }
-
-        function startDateBeforeRender ($dates) {
-            if ($scope.dateRangeEnd) {
-                var activeDate = moment($scope.dateRangeEnd);
-
+        function disable($dates, booked_time) {
+            for (var i = 0; i < booked_time.length; i++) {
                 $dates.filter(function (date) {
-                    return date.localDateValue() >= activeDate.valueOf()
+                    return date.localDateValue() ==  booked_time[i].valueOf()
                 }).forEach(function (date) {
                     date.selectable = false;
                 })
             }
         }
-
-        function endDateBeforeRender ($view, $dates) {
-            if ($scope.dateRangeStart) {
-                var activeDate = moment($scope.dateRangeStart).subtract(1, $view).add(1, 'minute');
-
-                $dates.filter(function (date) {
-                    return date.localDateValue() <= activeDate.valueOf()
-                }).forEach(function (date) {
-                    date.selectable = false;
-                })
-            }
-        }
-
-
     }]);

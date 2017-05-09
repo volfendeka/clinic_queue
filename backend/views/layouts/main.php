@@ -40,10 +40,13 @@ AppAsset::register($this);
             ['label' => 'Doctor', 'url' => ['/doctor/index']],
             ['label' => 'Patient', 'url' => ['/patient/index']],
             ['label' => 'Meeting', 'url' => ['/meeting/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Signup', 'url' => ['/site/signup']]
+            ) : (''),
+
+            Yii::$app->user->isGuest ? (
+                ['label' => 'Login', 'url' => ['/site/login'],]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')

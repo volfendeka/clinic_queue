@@ -21,6 +21,7 @@
     "angular-route": "1.4.8",
     "angular": "1.4.8",
     "angular-time-picker": "^1.1.0",
-    "moment": "^2.x"
+    "moment": "2.14.0",
+    "angular-moment-picker": "moment-picker#^0.9.11"
   }
 }

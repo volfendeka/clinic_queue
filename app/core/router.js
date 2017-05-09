@@ -1,39 +1,16 @@
 
-angular.module("router", ["ngRoute"])
-    .config(function ($routeProvider) {
-
-        $routeProvider
-            .when('/home',
-                {
-                    templateUrl:    'home/home.html',
-                    controller:     'HomeCtrl'
-                })
-            .when('/about',
-                {
-                    templateUrl:    'about/about.html',
-                    controller:     'AboutCtrl'
-                })
-            .when('/contact',
-                {
-                    templateUrl:    'contact/contact.html',
-                    controller:     'ContactCtrl'
-                })
-            .when('/consultation',
-                {
-                    templateUrl:    'consultation/consultation.html',
-                    controller:     'ConsultationCtrl'
-                })
-            .otherwise(
-                {
-                    templateUrl:    'home/home.html',
-                    controller:     'HomeCtrl'
-                });
-    })
-    .controller('navBar',
-        ['$scope', '$location', function ($scope, $location) {
+angular.module("router", [])
+    .controller('navigation', ['$scope', '$location', '$window', function ($scope, $location, $window) {
             $scope.navClass = function (page) {
                 var currentRoute = $location.path().substring(1) || 'home';
                 return page === currentRoute ? 'active' : '';
+            };
+            $scope.loggedIn = function() {
+                return Boolean($window.sessionStorage.access_token);
+            };
+            $scope.logout = function () {
+                delete $window.sessionStorage.access_token;
+                $location.path('/login').replace();
             };
         }]);
 

@@ -1,15 +1,21 @@
 'use strict';
 
-var app = angular.module("app", [
-        "router",
-        'backend_data',
-        'home',
-        'about',
-        'contact',
-        'consultation',
-        'GoogleApi',
-    ])
+angular.module("app", [
+    'ngRoute',
+    'config',
+    'router',
+    'backend_data',
+    'home',
+    'about',
+    'contact',
+    'login',
+    'register',
+    'consultation',
+    'GoogleApi',
+    'auth_service',
+    'directives',
+])
     .controller('AppCtrl', function () {
-        
+
     });
 

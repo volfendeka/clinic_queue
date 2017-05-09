@@ -1,14 +1,17 @@
-{{meetings}}
 {{meeting}}
     <div class="container">
         <h3>Запит на консультацію:</h3>
         <form role="form" name="request" method="post">
             <div class="form-group">
-                <label for="doctor_id">Лікар</label>
-                <div>
-                    <input name="doctor_id" ng-model="meeting.doctor_id" type="text" class="form-control" id="doctor_id" required>
-                    <span ng-show="request.doctor_id.$dirty && request.doctor_id.$invalid" class="help-inline">Doctor required</span>
-                </div>
+                <label for="specialist">Спеціаліст</label>
+                <select class="form-control" name="specialist" id="specialist" ng-model="specialist" ng-change="onSpecialistSet()">
+                    <option ng-repeat="profy in profecionals">{{profy.specialist}}</option>
+                </select>
+
+                <label for="doctor">Лікар</label>
+                <select class="form-control" name="doctor" id="doctor" ng-model="meeting.doctor_id" ng-blur="onDoctorSet()">
+                    <option ng-repeat="doc in doctors" value="{{doc.id}}">{{doc.last_name}} {{doc.first_name}}</option>
+                </select>
 
                 <label for="patient_id">Patient</label>
                 <div>
@@ -16,24 +19,26 @@
                     <span ng-show="request.patient_id.$dirty && request.patient_id.$invalid" class="help-inline">Patient required</span>
                 </div>
 
-                <label for="date_time_meeting">Time</label>
-                <div>
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" id="date_time_meeting" role="button" data-toggle="dropdown">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="glyphicon glyphicon-calendar"></i>
-                                </span>
-                                <input type="text" class="form-control" data-ng-model="meeting.date_time_meeting">
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                            <datetimepicker data-ng-model="meeting.date_time_meeting"
-                                            data-datetimepicker-config="{
-                                                dropdownSelector: '#date_time_meeting',
-                                                modelType: 'YYYY-MM-DD HH-MM-SS' }"/>
-                        </ul>
-                    </div>
+                <label for="dropdownDate">Time</label>
+                <div class="dropdown form-group dropdown-parent">
+                    <a class="dropdown-toggle" id="dropdownDate" role="button" data-toggle="dropdown" data-target=".dropdown-parent">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                            <input type="text" class="form-control" data-ng-model="meeting.date_time_meeting">
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="meeting.date_time_meeting"
+                                        data-datetimepicker-config="{ dropdownSelector: '#dropdownDate',
+                                                                      renderOn: 'date-changed',
+                                                                      minuteStep: 30,
+                                                                      modelType: 'YYYY-MM-DD HH-mm-ss'}"
+                                        data-on-set-time="dateOnSetTime()"
+                                        data-before-render="dateBeforeRender($dates)">
+                        </datetimepicker>
+                    </ul>
                 </div>
 
                 <label for="reason">Короткий опис причини</label>
@@ -47,29 +52,4 @@
             <button ng-click="createMeeting(meeting);" type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>
-
-
-<div class="dropdown form-group dropdown-start-parent">
-    <a class="dropdown-toggle" id="dropdownStart" role="button" data-toggle="dropdown" data-target=".dropdown-start-parent">
-        <input type="text" class="form-control" data-ng-model="dateRangeStart">
-    </a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-        <datetimepicker data-ng-model="dateRangeStart"
-                        data-datetimepicker-config="{ dropdownSelector: '#dropdownStart', renderOn: 'end-date-changed' }"
-                        data-on-set-time="startDateOnSetTime()"
-                        data-before-render="startDateBeforeRender($dates)"></datetimepicker>
-    </ul>
-</div>
-
-<div class="dropdown form-group dropdown-end-parent">
-    <a class="dropdown-toggle" id="dropdownEnd" role="button" data-toggle="dropdown" data-target=".dropdown-end-parent">
-        <input type="text" class="form-control" data-ng-model="dateRangeEnd">
-    </a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-        <datetimepicker data-ng-model="dateRangeEnd"
-                        data-datetimepicker-config="{ dropdownSelector: '#dropdownEnd', renderOn: 'start-date-changed' }"
-                        data-on-set-time="endDateOnSetTime()"
-                        data-before-render="endDateBeforeRender($view, $dates, $leftDate, $upDate, $rightDate)"></datetimepicker>
-    </ul>
-</div>
 

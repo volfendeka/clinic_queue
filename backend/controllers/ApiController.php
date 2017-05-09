@@ -2,17 +2,20 @@
 
 namespace app\controllers;
 
-use yii\rest\ActiveController;
-use yii\filters\Cors;
 use yii\web\Response;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\AccessControl;
 use yii\filters\ContentNegotiator;
+use yii\rest\ActiveController;
+use yii\filters\Cors;
+use app\models\LoginForm;
+use Yii;
 
-
-class Doctor_backendController extends ActiveController
+class ApiController extends ActiveController
 {
-    public $modelClass = 'app\models\Doctor';
+
+    public $modelClass = 'app\models\Meeting';
+
 
     public function behaviors()
     {
@@ -23,16 +26,15 @@ class Doctor_backendController extends ActiveController
         ];
 
         $behaviors['access'] = [
-            'only' => ['doctors', 'specialists', 'doctor_times'],
             'class' => AccessControl::className(),
             'rules' => [
                 [
-                    'actions' => ['logout', 'error', 'login'],
-                    'allow' => false,
+                    'actions' => ['login', 'logout', 'error'],
+                    'allow' => true,
                     'roles' => ['?'],
                 ],
                 [
-                    'actions' => ['index', 'view', 'logout', 'error', 'login', 'doctors', 'specialists', 'doctor_times'],
+                    'actions' => ['logout', 'error', 'login', 'doctors', 'specialists', 'doctor_times'],
                     'allow' => true,
                     'roles' => ['@'],
                 ],
@@ -51,6 +53,17 @@ class Doctor_backendController extends ActiveController
         ];
 
         return $behaviors;
+    }
+
+    public function actionLogin()
+    {
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
+            return ['access_token' => Yii::$app->user->identity->getAuthKey()];
+        } else {
+            $model->validate();
+            return $model;
+        }
     }
 
 }

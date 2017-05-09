@@ -2,9 +2,6 @@
 <html ng-app="app">
     <head>
         <title>Clinic</title>
-        <script>
-            document.write('<base href="' + document.location + '" />');
-        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="vendor/bower/bootstrap/dist/css/bootstrap.css">
@@ -13,28 +10,17 @@
 
         <script src="vendor/bower/jquery/dist/jquery.min.js"></script>
         <script src="vendor/bower/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="vendor/bower/moment/moment.js"></script>
         <script src="vendor/bower/angular/angular.js"></script>
+        <script src="vendor/bower/moment/moment.js"></script>
         <script src="vendor/bower/angular-route/angular-route.js"></script>
-
         <script src="vendor/bower/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
         <script src="vendor/bower/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
-
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWzB6FqsUCMivyNA6M0vt5k_WElSd0TFc"></script>
+
     </head>
     <body>
 
-        <div class="container">
-            <div class="navbar">
-                <ul class="nav navbar-nav" ng-controller="navBar">
-                    <li ng-class="navClass('home')"><a href='#/home'>Home</a></li>
-                    <li ng-class="navClass('about')"><a href='#/about'>About Us</a></li>
-                    <li ng-class="navClass('contact')"><a href='#/contact'>Contact Us</a></li>
-                    <li ng-class="navClass('consultation')"><a href='#/consultation'>Consultation</a></li>
-                </ul>
-            </div>
-        </div>
-
+        <div my-navbar> </div>
         <div ng-view> </div>
 
     </body>
@@ -45,6 +31,7 @@
 
 <script src="core/app.config.js"></script>
 <script src="core/app.module.js"></script>
+<script src="core/services/auth.factory.js"></script>
 <script src="core/services/data.service.js"></script>
 <script src="core/services/map.service.js"></script>
 <script src="home/home.controller.js"></script>
@@ -53,5 +40,8 @@
 <script src="consultation/consultation.controller.js"></script>
 <script src="core/router.js"></script>
 <script src="core/filters/filters.js"></script>
+<script src="login/login.controller.js"></script>
+<script src="register/register.controller.js"></script>
+<script src="core/directives/navbar.directive.js"></script>
 </html>
 
