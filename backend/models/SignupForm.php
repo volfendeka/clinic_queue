@@ -30,6 +30,7 @@ class SignupForm extends Model
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
 
+            ['repeat_password', 'required'],
             ['repeat_password', 'compare','compareAttribute'=>'password'],
         ];
     }
@@ -47,7 +48,7 @@ class SignupForm extends Model
 
         $user = new User();
         $user->username = $this->username;
-        $user->email = $this->username.'@mail.com';
+        $user->email = $this->email;
         $user->setPassword($this->password);
         $user->generateAuthKey();
 

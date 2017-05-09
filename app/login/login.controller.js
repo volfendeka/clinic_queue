@@ -6,7 +6,7 @@ angular.module("login", [])
             $scope.login = function () {
                 $scope.submitted = true;
                 $scope.error = {};
-                $http.post('http://clinic_queue.loc/backend/web/api/login', $scope.userModel
+                $http.post(configs.serviceBack + '/api/login', $scope.userModel
                     ).success(function (data) {
                     $window.sessionStorage.access_token = data.access_token;
                         $location.path('/home').replace();

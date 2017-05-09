@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+
 use yii\web\Response;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\AccessControl;
@@ -9,6 +10,7 @@ use yii\filters\ContentNegotiator;
 use yii\rest\ActiveController;
 use yii\filters\Cors;
 use app\models\LoginForm;
+use app\models\SignupForm;
 use Yii;
 
 class ApiController extends ActiveController
@@ -29,12 +31,12 @@ class ApiController extends ActiveController
             'class' => AccessControl::className(),
             'rules' => [
                 [
-                    'actions' => ['login', 'logout', 'error'],
+                    'actions' => ['login', 'logout', 'error', 'register'],
                     'allow' => true,
                     'roles' => ['?'],
                 ],
                 [
-                    'actions' => ['logout', 'error', 'login', 'doctors', 'specialists', 'doctor_times'],
+                    'actions' => ['login','logout', 'error', 'register', 'doctors', 'specialists', 'doctor_times'],
                     'allow' => true,
                     'roles' => ['@'],
                 ],
@@ -60,6 +62,17 @@ class ApiController extends ActiveController
         $model = new LoginForm();
         if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
             return ['access_token' => Yii::$app->user->identity->getAuthKey()];
+        } else {
+            $model->validate();
+            return $model;
+        }
+    }
+
+    public function actionRegister()
+    {
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->signup()) {
+            return ['user' => Yii::$app->user];
         } else {
             $model->validate();
             return $model;

@@ -11,11 +11,12 @@ angular.module('backend_data', [])
                     .then( successHandler )
                     .catch( errorHandler );
                 function successHandler( result ) {
-                    //$location.path(configs.serviceApp+'#/home');
+                    alert("Saved");
+                    return result;
                 }
                 function errorHandler( result ){
-                    alert("Error data")
-                    //$location.path('/home')
+                    alert("Error data");
+                    return result;
                 }
             };
 
