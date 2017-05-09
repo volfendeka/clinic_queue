@@ -36,7 +36,7 @@ class Patient extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['first_name', 'last_name', 'age', 'city', 'street', 'building', 'conversation_id'], 'required'],
+            [['first_name', 'last_name'], 'required'],
             [['age', 'building', 'family_doctor', 'conversation_id'], 'integer'],
             [['first_name', 'last_name'], 'string', 'max' => 30],
             [['city', 'street'], 'string', 'max' => 50],

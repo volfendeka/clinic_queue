@@ -13,12 +13,6 @@
                     <option ng-repeat="doc in doctors" value="{{doc.id}}">{{doc.last_name}} {{doc.first_name}}</option>
                 </select>
 
-                <label for="patient_id">Patient</label>
-                <div>
-                    <input name="patient_id" ng-model="meeting.patient_id" type="text" class="form-control" id="patient_id" required>
-                    <span ng-show="request.patient_id.$dirty && request.patient_id.$invalid" class="help-inline">Patient required</span>
-                </div>
-
                 <label for="dropdownDate">Time</label>
                 <div class="dropdown form-group dropdown-parent">
                     <a class="dropdown-toggle" id="dropdownDate" role="button" data-toggle="dropdown" data-target=".dropdown-parent">

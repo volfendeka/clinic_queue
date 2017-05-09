@@ -61,7 +61,10 @@ class ApiController extends ActiveController
     {
         $model = new LoginForm();
         if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
-            return ['access_token' => Yii::$app->user->identity->getAuthKey()];
+            return [
+                'access_token' => Yii::$app->user->identity->getAuthKey(),
+                'user_id' => Yii::$app->user->identity->getId(),
+            ];
         } else {
             $model->validate();
             return $model;
@@ -74,9 +77,9 @@ class ApiController extends ActiveController
         if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->signup()) {
             return ['user' => Yii::$app->user];
         } else {
-            $model->validate();
             return $model;
         }
+
     }
 
 }

@@ -21,6 +21,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <?= $form->field($model, 'password')->passwordInput()->label('Password:') ?>
 
+            <?= $form->field($model, 'email')->textInput()->label('Email:') ?>
+
             <?= $form->field($model, 'repeat_password')->passwordInput()->label('Repeat password:') ?>
 
             <div class="form-group">
