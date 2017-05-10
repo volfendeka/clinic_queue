@@ -1,49 +1,68 @@
 {{meeting}}
-    <div class="container">
-        <h3>Запит на консультацію:</h3>
-        <form role="form" name="request" method="post">
-            <div class="form-group">
-                <label for="specialist">Спеціаліст</label>
-                <select class="form-control" name="specialist" id="specialist" ng-model="specialist" ng-change="onSpecialistSet()">
-                    <option ng-repeat="profy in profecionals">{{profy.specialist}}</option>
-                </select>
+<div class="container ">
+    <div class="row alert alert-warning">
+        <p><strong>Увага:</strong> Ми не можемо опрацювати екстренні виклики</p>
+        <p>Виклик бригади швидкої допомоги здійснюється з телефону мережі загального користування шляхом набору номера <strong>103</strong> або при безпосередньому зверненні в клініку.</p>
+        <p>Для осіб з вадами слуху та мови здійснюється прийом викликів за допомогою:</p>
+        <div class="double-column clearthis">
+            <div class="col-sm-6 col-md-6">
+                <ul class="link-list">
+                    <li>SMS-повідомлень для абонентів оператора мобільного зв’язку «Київстар» на номер 10-003, для абонентів інших операторів мобільного зв’язку — на номер 096-5613977 <em>(24/7)</em></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <ul class="link-list">
+                    <li>Факсимільних повідомлень на номер 234-5356.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container alert alert-info">
+    <h3>Запит на консультацію:</h3>
+    <form role="form" name="request" method="post">
+        <div class="form-group">
+            <label for="specialist">Спеціаліст</label>
+            <select class="form-control" name="specialist" id="specialist" ng-model="specialist" ng-change="onSpecialistSet()">
+                <option ng-repeat="profy in profecionals">{{profy.specialist}}</option>
+            </select>
 
-                <label for="doctor">Лікар</label>
-                <select class="form-control" name="doctor" id="doctor" ng-model="meeting.doctor_id" ng-blur="onDoctorSet()">
-                    <option ng-repeat="doc in doctors" value="{{doc.id}}">{{doc.last_name}} {{doc.first_name}}</option>
-                </select>
+            <label for="doctor">Лікар</label>
+            <select class="form-control" name="doctor" id="doctor" ng-model="meeting.doctor_id" ng-blur="onDoctorSet()">
+                <option ng-repeat="doc in doctors" value="{{doc.id}}">{{doc.last_name}} {{doc.first_name}}</option>
+            </select>
 
-                <label for="dropdownDate">Time</label>
-                <div class="dropdown form-group dropdown-parent">
-                    <a class="dropdown-toggle" id="dropdownDate" role="button" data-toggle="dropdown" data-target=".dropdown-parent">
-                        <div class="input-group">
+            <label for="dropdownDate">Time</label>
+            <div class="dropdown form-group dropdown-parent">
+                <a class="dropdown-toggle" id="dropdownDate" role="button" data-toggle="dropdown" data-target=".dropdown-parent">
+                    <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-calendar"></i>
                             </span>
-                            <input type="text" class="form-control" data-ng-model="meeting.date_time_meeting">
-                        </div>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <datetimepicker data-ng-model="meeting.date_time_meeting"
-                                        data-datetimepicker-config="{ dropdownSelector: '#dropdownDate',
+                        <input type="text" class="form-control" data-ng-model="meeting.date_time_meeting">
+                    </div>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <datetimepicker data-ng-model="meeting.date_time_meeting"
+                                    data-datetimepicker-config="{ dropdownSelector: '#dropdownDate',
                                                                       renderOn: 'date-changed',
                                                                       minuteStep: 30,
                                                                       modelType: 'YYYY-MM-DD HH-mm-ss'}"
-                                        data-on-set-time="dateOnSetTime()"
-                                        data-before-render="dateBeforeRender($dates)">
-                        </datetimepicker>
-                    </ul>
-                </div>
-
-                <label for="reason">Короткий опис причини</label>
-                <div>
-                    <input name="reason" ng-model="meeting.reason" type="textarea" class="form-control" id="reason" required>
-                    <span ng-show="request.reason.$dirty && request.reason.$invalid" class="help-inline">Reason required</span>
-                </div>
+                                    data-on-set-time="dateOnSetTime()"
+                                    data-before-render="dateBeforeRender($dates)">
+                    </datetimepicker>
+                </ul>
             </div>
 
-            <a href="#/home" class="btn btn-default">Cancel</a>
-            <button ng-click="createMeeting(meeting);" type="submit" class="btn btn-default">Submit</button>
-        </form>
-    </div>
+            <label for="reason">Короткий опис причини</label>
+            <div>
+                <input name="reason" ng-model="meeting.reason" type="textarea" class="form-control" id="reason" required>
+                <span ng-show="request.reason.$dirty && request.reason.$invalid" class="help-inline">Reason required</span>
+            </div>
+        </div>
+
+        <a href="#/home" class="btn btn-default">Cancel</a>
+        <button ng-click="createMeeting(meeting);" type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
 
