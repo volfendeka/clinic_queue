@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 
+use app\models\Patient;
 use yii\web\Response;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\AccessControl;
@@ -74,8 +75,11 @@ class ApiController extends ActiveController
     public function actionRegister()
     {
         $model = new SignupForm();
-        if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->signup()) {
-            return ['user' => Yii::$app->user];
+        if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $user_id = $model->signup()) {
+            $patient = new Patient();
+            $patient->user_id = $user_id;
+            $patient->save();
+            return ['user' => Yii::$app->user,];
         } else {
             return $model;
         }

@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use app\models\Patient;
 
 
 /**
@@ -35,7 +36,7 @@ class DoctorController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'login'],
+                        'actions' => ['logout', 'index', 'login', 'view', 'update', 'delete', 'create'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],

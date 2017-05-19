@@ -1,10 +1,12 @@
 
-<p><h3>Лікарі:</h3></p>
-
-<ul class="col-xs-4 col-md-4" ng-repeat="(key, value) in doc | groupBy: 'specialist'">
-    <h4>{{key | capitalize}}</h4>
-    <li ng-repeat="d in value">
-        {{d.first_name+" "+d.last_name}}
-    </li>
-</ul>
-
+<div class="container">
+    <p><h3>Doctors:</h3></p>
+    <div class="row well">
+        <ul class="col-xs-4 col-md-4" ng-repeat="(key, value) in doc | groupBy: 'specialist'">
+            <h4>{{key | capitalize}}</h4>
+            <li ng-repeat="d in value">
+                {{d.first_name+" "+d.last_name}}
+            </li>
+        </ul>
+    </div>
+</div>

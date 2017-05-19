@@ -35,7 +35,7 @@ class PatientController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'login'],
+                        'actions' => ['logout', 'index', 'login', 'view', 'update', 'delete', 'create'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],

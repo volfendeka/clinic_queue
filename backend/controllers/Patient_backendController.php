@@ -55,8 +55,14 @@ class Patient_backendController extends ActiveController
         return $behaviors;
     }
 
-    public function actionView($id)
+    public function actionGet_patient($id = '')
     {
-        return Patient::findOne($id);
+        return Patient::find()
+                        ->where(['user_id' => $id])
+                        ->joinWith(['userId'=>function($query){$query->select(['email']);}])
+                        ->joinWith(['familyDoctor'=>function($query){$query->select(['first_name', 'last_name']);}])
+                        ->joinWith(['meetings'])
+                        ->asArray()
+                        ->one();
     }
 }

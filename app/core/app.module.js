@@ -14,6 +14,7 @@ angular.module("app", [
     'GoogleApi',
     'auth_service',
     'directives',
+    'account',
 ])
     .controller('AppCtrl', function () {
 

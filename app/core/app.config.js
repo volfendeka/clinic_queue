@@ -1,6 +1,7 @@
 var configs = {
     serviceApp: 'http://clinic_queue.loc/app/',
-    serviceBack: 'http://clinic_queue.loc/backend/web/'
+    serviceBack: 'http://clinic_queue.loc/backend/web/',
+    images: 'http://clinic_queue.loc/backend/images',
 }
 
 angular.module("config", ["ngRoute"])
@@ -35,6 +36,11 @@ angular.module("config", ["ngRoute"])
                 {
                     templateUrl:    'register/register.html',
                     controller:     'RegisterCtrl'
+                })
+            .when('/account',
+                {
+                    templateUrl:    'account/account.html',
+                    controller:     'AccountCtrl'
                 })
             .otherwise(
                 {

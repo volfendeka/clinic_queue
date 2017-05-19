@@ -37,7 +37,7 @@ class Meeting extends \yii\db\ActiveRecord
             [['doctor_id', 'patient_id'], 'integer'],
             [['date_time_meeting', 'date_time_request'], 'safe'],
             [['reason'], 'string'],
-            [['patient_id'], 'exist', 'skipOnError' => true, 'targetClass' => Patient::className(), 'targetAttribute' => ['patient_id' => 'id']],
+            [['patient_id'], 'exist', 'skipOnError' => true, 'targetClass' => Patient::className(), 'targetAttribute' => ['patient_id' => 'user_id']],
             [['doctor_id'], 'exist', 'skipOnError' => true, 'targetClass' => Doctor::className(), 'targetAttribute' => ['doctor_id' => 'id']],
         ];
     }
@@ -62,7 +62,7 @@ class Meeting extends \yii\db\ActiveRecord
      */
     public function getPatient()
     {
-        return $this->hasOne(Patient::className(), ['id' => 'patient_id']);
+        return $this->hasOne(Patient::className(), ['user_id' => 'patient_id']);
     }
 
     /**

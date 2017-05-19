@@ -24,10 +24,11 @@ angular.module("consultation", ['ui.bootstrap.datetimepicker'])
         };
 
         $scope.onDoctorSet = function(){
-            $scope.meeting.patient_id = $window.sessionStorage.user_id;
+            //$scope.meeting.patient_id = $window.sessionStorage.user_id;
         };
 
         $scope.createMeeting = function(meeting) {
+            meeting.patient_id = $window.sessionStorage.user_id;
             data.postData(urls.create_meeting, meeting).then(function () {
                 console.log('createdddd');
             })
@@ -64,5 +65,20 @@ angular.module("consultation", ['ui.bootstrap.datetimepicker'])
                     date.selectable = false;
                 })
             }
+            const todaySinceMidnight = new Date();
+            todaySinceMidnight.setUTCHours(0,0,0,0);
+            $dates.filter(function (date) {
+                return date.utcDateValue < todaySinceMidnight.getTime();
+            }).forEach(function (date) {
+                date.selectable = false;
+            });
+
+            $dates.filter(function (date) {
+                return (date.dayOfWeek == 6) || (date.dayOfWeek == 0);
+            }).forEach(function (date) {
+                date.selectable = false;
+            });
         }
     }]);
+
+

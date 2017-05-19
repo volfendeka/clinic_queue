@@ -27,6 +27,7 @@ class SignupForm extends Model
             ['username', 'string', 'min' => 2, 'max' => 255],
 
             ['email', 'required'],
+            ['username', 'unique', 'targetClass' => 'app\models\User', 'message' => 'This email already in use.'],
             ['email', 'email'],
 
             ['password', 'required'],
@@ -54,6 +55,6 @@ class SignupForm extends Model
         $user->setPassword($this->password);
         $user->generateAuthKey();
 
-        return $user->save() ? $user : null;
+        return $user->save() ? $user->getPrimaryKey() : null;
     }
 }
