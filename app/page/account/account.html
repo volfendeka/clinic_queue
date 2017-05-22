@@ -27,7 +27,7 @@
                 <h5>{{patient.familyDoctor.last_name}} {{patient.familyDoctor.first_name}}</h5>
                 <h3>Upcoming events:</h3>
                 <li ng-repeat="(key, value) in patient.meetings">
-                    {{value.date_time_meeting}} {{value.doctor_id}}
+                    {{value.date_time_meeting}} ({{value.doctor.first_name}} {{value.doctor.last_name}})
                 </li>
             </div>
         </div>

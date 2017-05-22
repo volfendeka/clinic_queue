@@ -3,7 +3,7 @@
 
 namespace app\controllers;
 
-use app\models\Patient;
+use app\models\Prescription;
 use yii\rest\ActiveController;
 use yii\filters\Cors;
 use yii\web\Response;
@@ -11,9 +11,9 @@ use yii\filters\auth\HttpBearerAuth;
 use yii\filters\AccessControl;
 use yii\filters\ContentNegotiator;
 
-class Patient_backendController extends ActiveController
+class Prescription_backendController extends ActiveController
 {
-    public $modelClass = 'app\models\Patient';
+    public $modelClass = 'app\models\Prescription';
 
     public function behaviors()
     {
@@ -55,14 +55,13 @@ class Patient_backendController extends ActiveController
         return $behaviors;
     }
 
-    public function actionGet_patient($id = '')
+    public function actionGet_prescription($id = '')
     {
-        return Patient::find()
-                        ->where(['user_id' => $id])
-                        ->joinWith(['userId'=> function($query){$query->select(['email']);}])
-                        ->joinWith(['familyDoctor'=> function($query){$query->select(['first_name', 'last_name']);}])
-                        ->joinWith(['meetings'=> function($query){$query->with(['doctor']);}])
+        return Prescription::find()
+                        ->where(['patient_id' => $id])
                         ->asArray()
-                        ->one();
+                        ->select(['diagnosis', 'pharmacy', 'pills_number',
+                            'refills_number', 'instruction', 'start_period', 'end_period'])
+                        ->all();
     }
 }

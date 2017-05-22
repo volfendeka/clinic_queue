@@ -10,6 +10,7 @@ angular.module("router", [])
             };
             $scope.logout = function () {
                 delete $window.sessionStorage.access_token;
+                delete $window.sessionStorage.user_id;
                 $location.path('/login').replace();
             };
         }]);

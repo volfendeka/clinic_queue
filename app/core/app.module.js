@@ -15,6 +15,7 @@ angular.module("app", [
     'auth_service',
     'directives',
     'account',
+    'prescription',
 ])
     .controller('AppCtrl', function () {
 

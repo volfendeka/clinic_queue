@@ -2,17 +2,17 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use \janisto\timepicker\TimePicker;
 use yii\helpers\ArrayHelper;
 use app\models\Patient;
 use app\models\Doctor;
+use \janisto\timepicker\TimePicker;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Meeting */
+/* @var $model app\models\Prescription */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="meeting-form">
+<div class="prescription-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -23,7 +23,17 @@ use app\models\Doctor;
         ArrayHelper::map(Doctor::find()->asArray()->all(), 'id', 'first_name', 'last_name')); ?>
 
 
-    <?= $form->field($model, 'date_time_meeting')->widget(TimePicker::className(), [
+    <?= $form->field($model, 'diagnosis')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'pharmacy')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'pills_number')->textInput() ?>
+
+    <?= $form->field($model, 'refills_number')->textInput() ?>
+
+    <?= $form->field($model, 'instruction')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'start_period')->widget(TimePicker::className(), [
         'mode' => 'datetime',
         'clientOptions'=>[
             'dateFormat' => 'yy-mm-dd',
@@ -33,7 +43,15 @@ use app\models\Doctor;
     ]);
     ?>
 
-    <?= $form->field($model, 'reason')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'end_period')->widget(TimePicker::className(), [
+        'mode' => 'datetime',
+        'clientOptions'=>[
+            'dateFormat' => 'yy-mm-dd',
+            'timeFormat' => 'HH:mm:ss',
+            'showSecond' => true,
+        ]
+    ]);
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

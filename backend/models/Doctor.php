@@ -65,4 +65,9 @@ class Doctor extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Patient::className(), ['family_doctor' => 'id']);
     }
+
+    public function getPrescriptions()
+    {
+        return $this->hasMany(Prescription::className(), ['doctor_id' => 'id']);
+    }
 }

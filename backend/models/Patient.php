@@ -95,4 +95,9 @@ class Patient extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
+
+    public function getPrescriptions()
+    {
+        return $this->hasMany(Prescription::className(), ['patient_id' => 'user_id']);
+    }
 }

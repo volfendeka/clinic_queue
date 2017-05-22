@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\Doctor;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Patient */
@@ -18,13 +20,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'age')->textInput() ?>
 
+    <?= $form->field($model, 'user_id')->textInput() ?>
+
     <?= $form->field($model, 'city')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'street')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'building')->textInput() ?>
 
-    <?= $form->field($model, 'family_doctor')->textInput() ?>
+    <?= $form->field($model, 'family_doctor')->dropDownList(
+        ArrayHelper::map(Doctor::find()->asArray()->all(), 'id', 'first_name', 'last_name')); ?>
 
     <?= $form->field($model, 'conversation_id')->textInput() ?>
 
