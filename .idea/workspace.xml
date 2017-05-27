@@ -2,91 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d23dee3f-f370-4d86-b195-1e61e57e4299" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-bs.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-10.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-8.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader-9.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/ajax-loaders/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/page/radio/radio.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/page/radio/radio.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/page/radiology/radiology.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/page/radiology/radiology.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/controllers/Image_backendController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/images/avatar.jpg" afterPath="$PROJECT_DIR$/backend/images/avatar.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/app.config.js" afterPath="$PROJECT_DIR$/app/core/app.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/app.module.js" afterPath="$PROJECT_DIR$/app/core/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/directives/my_navbar.html" afterPath="$PROJECT_DIR$/app/core/directives/my_navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/directives/navbar.directive.js" afterPath="$PROJECT_DIR$/app/core/directives/navbar.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/services/auth.factory.js" afterPath="$PROJECT_DIR$/app/core/services/auth.factory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/default.css" afterPath="$PROJECT_DIR$/app/css/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/icon-community.svg" afterPath="$PROJECT_DIR$/app/images/icon-community.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/icon-express-care.svg" afterPath="$PROJECT_DIR$/app/images/icon-express-care.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/icon-for-medical-professionals.svg" afterPath="$PROJECT_DIR$/app/images/icon-for-medical-professionals.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/icon-mychart.svg" afterPath="$PROJECT_DIR$/app/images/icon-mychart.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/icon-myconsult.svg" afterPath="$PROJECT_DIR$/app/images/icon-myconsult.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/icon-myimages.svg" afterPath="$PROJECT_DIR$/app/images/icon-myimages.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/icon-records.svg" afterPath="$PROJECT_DIR$/app/images/icon-records.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/icon-star-radiology.svg" afterPath="$PROJECT_DIR$/app/images/icon-star-radiology.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/account/account.controller.js" afterPath="$PROJECT_DIR$/app/page/account/account.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/account/account.html" afterPath="$PROJECT_DIR$/app/page/account/account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/consultation/consultation.controller.js" afterPath="$PROJECT_DIR$/app/page/consultation/consultation.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/consultation/consultation.html" afterPath="$PROJECT_DIR$/app/page/consultation/consultation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/home/home.html" afterPath="$PROJECT_DIR$/app/page/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/login/login.controller.js" afterPath="$PROJECT_DIR$/app/page/login/login.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/login/login.html" afterPath="$PROJECT_DIR$/app/page/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/register/register.controller.js" afterPath="$PROJECT_DIR$/app/page/register/register.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/register/register.html" afterPath="$PROJECT_DIR$/app/page/register/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.htaccess" afterPath="$PROJECT_DIR$/backend/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/clinic.sql" afterPath="$PROJECT_DIR$/backend/clinic.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/ApiController.php" afterPath="$PROJECT_DIR$/backend/controllers/ApiController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/DoctorController.php" afterPath="$PROJECT_DIR$/backend/controllers/DoctorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/MeetingController.php" afterPath="$PROJECT_DIR$/backend/controllers/MeetingController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/PatientController.php" afterPath="$PROJECT_DIR$/backend/controllers/PatientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/Patient_backendController.php" afterPath="$PROJECT_DIR$/backend/controllers/Patient_backendController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/PrescriptionController.php" afterPath="$PROJECT_DIR$/backend/controllers/PrescriptionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/Prescription_backendController.php" afterPath="$PROJECT_DIR$/backend/controllers/Prescription_backendController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Doctor.php" afterPath="$PROJECT_DIR$/backend/models/Doctor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/DoctorSearch.php" afterPath="$PROJECT_DIR$/backend/models/DoctorSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Meeting.php" afterPath="$PROJECT_DIR$/backend/models/Meeting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/MeetingSearch.php" afterPath="$PROJECT_DIR$/backend/models/MeetingSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Patient.php" afterPath="$PROJECT_DIR$/backend/models/Patient.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/PatientSearch.php" afterPath="$PROJECT_DIR$/backend/models/PatientSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Prescription.php" afterPath="$PROJECT_DIR$/backend/models/Prescription.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/PrescriptionSearch.php" afterPath="$PROJECT_DIR$/backend/models/PrescriptionSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/doctor/_form.php" afterPath="$PROJECT_DIR$/backend/views/doctor/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/doctor/_search.php" afterPath="$PROJECT_DIR$/backend/views/doctor/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/doctor/create.php" afterPath="$PROJECT_DIR$/backend/views/doctor/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/doctor/index.php" afterPath="$PROJECT_DIR$/backend/views/doctor/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/doctor/update.php" afterPath="$PROJECT_DIR$/backend/views/doctor/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/doctor/view.php" afterPath="$PROJECT_DIR$/backend/views/doctor/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/layouts/main.php" afterPath="$PROJECT_DIR$/backend/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/meeting/_form.php" afterPath="$PROJECT_DIR$/backend/views/meeting/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/meeting/_search.php" afterPath="$PROJECT_DIR$/backend/views/meeting/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/meeting/create.php" afterPath="$PROJECT_DIR$/backend/views/meeting/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/meeting/index.php" afterPath="$PROJECT_DIR$/backend/views/meeting/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/meeting/update.php" afterPath="$PROJECT_DIR$/backend/views/meeting/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/meeting/view.php" afterPath="$PROJECT_DIR$/backend/views/meeting/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/patient/_form.php" afterPath="$PROJECT_DIR$/backend/views/patient/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/patient/_search.php" afterPath="$PROJECT_DIR$/backend/views/patient/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/patient/create.php" afterPath="$PROJECT_DIR$/backend/views/patient/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/patient/index.php" afterPath="$PROJECT_DIR$/backend/views/patient/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/patient/update.php" afterPath="$PROJECT_DIR$/backend/views/patient/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/patient/view.php" afterPath="$PROJECT_DIR$/backend/views/patient/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/prescription/_form.php" afterPath="$PROJECT_DIR$/backend/views/prescription/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/prescription/_search.php" afterPath="$PROJECT_DIR$/backend/views/prescription/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/prescription/create.php" afterPath="$PROJECT_DIR$/backend/views/prescription/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/prescription/index.php" afterPath="$PROJECT_DIR$/backend/views/prescription/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/prescription/update.php" afterPath="$PROJECT_DIR$/backend/views/prescription/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/prescription/view.php" afterPath="$PROJECT_DIR$/backend/views/prescription/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bower.json" afterPath="$PROJECT_DIR$/app/bower.json" />
     </list>
     <ignored path="clinic_front.loc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,12 +28,9 @@
       <file leaf-file-name="radio.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/page/radio/radio.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
+            <state relative-caret-position="0">
               <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="30" />
-              <folding>
-                <marker date="1495816637339" expanded="true" signature="67:2497" ph="[...]" />
-                <marker date="1495816637339" expanded="true" signature="177:2491" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,7 +38,7 @@
       <file leaf-file-name="Image_backendController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/controllers/Image_backendController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="1080">
               <caret line="67" column="27" lean-forward="false" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
               <folding>
                 <element signature="e#36#57#0#PHP" expanded="true" />
@@ -132,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="radio.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="radio.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/page/radio/radio.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
@@ -149,6 +64,16 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -187,8 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/models/SignupForm.php" />
-        <option value="$PROJECT_DIR$/backend/controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/app/register/register.controller.js" />
         <option value="$PROJECT_DIR$/backend/models/PatientSearch.php" />
         <option value="$PROJECT_DIR$/app/consultation/consultation.controller.js" />
@@ -238,6 +161,8 @@
         <option value="$PROJECT_DIR$/app/page/radio/radio.controller.js" />
         <option value="$PROJECT_DIR$/backend/controllers/Image_backendController.php" />
         <option value="$PROJECT_DIR$/app/page/radio/radio.html" />
+        <option value="$PROJECT_DIR$/app/bower.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -270,7 +195,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,8 +207,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clinic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clinic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -769,6 +708,7 @@
       <workItem from="1495536693586" duration="5012000" />
       <workItem from="1495639468118" duration="614000" />
       <workItem from="1495811135667" duration="6259000" />
+      <workItem from="1495872056433" duration="725000" />
     </task>
     <task id="LOCAL-00001" summary="diploma restart">
       <created>1493056292961</created>
@@ -788,11 +728,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340704000" />
+    <option name="totallyTimeSpent" value="341429000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -802,21 +742,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34661356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35219124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -824,6 +763,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -856,41 +796,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/controllers/PrescriptionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/models/PrescriptionSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-505">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/meeting/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/prescription/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/services/data.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/core/app.router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1030,23 +935,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1116">
           <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.js" />
     <entry file="file://$PROJECT_DIR$/app/core/directives/navbar.directive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-648">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,7 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
           <caret line="70" column="70" lean-forward="false" selection-start-line="70" selection-start-column="70" selection-end-line="70" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,7 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,7 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
           <caret line="75" column="67" lean-forward="false" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,7 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="79" column="41" lean-forward="false" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,7 +985,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,7 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,7 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,7 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,7 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="43" column="50" lean-forward="false" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,7 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="60" column="32" lean-forward="true" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,7 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="631" column="20" lean-forward="false" selection-start-line="631" selection-start-column="20" selection-end-line="631" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,7 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="72" lean-forward="false" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,9 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
           <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding>
-            <element signature="e#36#57#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1168,7 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1176,7 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1184,7 +1062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
           <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1192,7 +1069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,28 +1081,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/page/radio/radio.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
+        <state relative-caret-position="0">
           <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="30" />
-          <folding>
-            <marker date="1495816637339" expanded="true" signature="67:2497" ph="[...]" />
-            <marker date="1495816637339" expanded="true" signature="177:2491" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/controllers/Image_backendController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="1080">
           <caret line="67" column="27" lean-forward="false" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
           <folding>
             <element signature="e#36#57#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bower/angular-time-picker/dist/angular-time-picker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4536">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bower/angular-bootstrap-datetimepicker/src/js/datetimepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bower/angular-moment-picker/dist/angular-moment-picker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1246,6 +1152,14 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
