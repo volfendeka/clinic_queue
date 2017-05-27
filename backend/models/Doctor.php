@@ -70,4 +70,9 @@ class Doctor extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Prescription::className(), ['doctor_id' => 'id']);
     }
+
+    public function getImages()
+    {
+        return $this->hasMany(Image::className(), ['doctor_id' => 'id']);
+    }
 }

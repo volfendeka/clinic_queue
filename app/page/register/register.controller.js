@@ -6,15 +6,15 @@ angular.module("register", [])
             $scope.register = function () {
                 $scope.submitted = true;
                 $scope.error = {};
-                $http.post(configs.serviceBack + '/api/register', $scope.userModel
-                ).success(function (data) {
+                $http.post(configs.serviceBack + '/api/register', $scope.userModel)
+                    .success(function (data) {
                     $location.path('/login').replace();
-                }).error(function (data) {
+                    })
+                    .error(function (data) {
                         angular.forEach(data, function (error) {
                             $scope.error[error.field] = error.message;
                         });
-                    }
-                );
+                    });
             };
         }
     ]);

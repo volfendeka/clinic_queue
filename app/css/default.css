@@ -13,7 +13,24 @@
     margin:0 auto;
     padding:0 auto;
 }
+
 .avatar{
     width: 250px;
     height: 250px;
+}
+.left{
+    border-right: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+}
+.bottom{
+    border-bottom: 1px solid #DEDEDE;
+}
+.img{
+    width:99%;
+    height:99px;
+}
+.img:hover{
+    width: 100%;
+    height:100px;
+    cursor: pointer;
 }

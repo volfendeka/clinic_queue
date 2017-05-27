@@ -65,4 +65,9 @@ class Patient_backendController extends ActiveController
                         ->asArray()
                         ->one();
     }
+
+    public function actionPatient_id_pair()
+    {
+        return Patient::find()->select(['id', 'first_name', 'last_name'])->all();
+    }
 }

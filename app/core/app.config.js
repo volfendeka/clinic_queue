@@ -48,6 +48,16 @@ angular.module("config", ["ngRoute"])
                     templateUrl:    configs.page+'prescription/prescription.html',
                     controller:     'PrescriptionCtrl'
                 })
+            .when('/radiology',
+                {
+                    templateUrl:    configs.page+'radiology/radiology.html',
+                    controller:     'RadiologyCtrl'
+                })
+            .when('/radio',
+                {
+                    templateUrl:    configs.page+'radio/radio.html',
+                    controller:     'RadioCtrl'
+                })
             .otherwise(
                 {
                     templateUrl:    configs.page+'home/home.html',

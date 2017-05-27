@@ -16,6 +16,8 @@ angular.module("app", [
     'directives',
     'account',
     'prescription',
+    'radiology',
+    'radio',
 ])
     .controller('AppCtrl', function () {
 

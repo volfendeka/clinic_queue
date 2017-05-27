@@ -3,6 +3,7 @@
 
 namespace app\controllers;
 
+use app\models\Image;
 use app\models\Prescription;
 use yii\rest\ActiveController;
 use yii\filters\Cors;
@@ -10,6 +11,7 @@ use yii\web\Response;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\AccessControl;
 use yii\filters\ContentNegotiator;
+use Yii;
 
 class Prescription_backendController extends ActiveController
 {

@@ -37,7 +37,7 @@ class Prescription extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['patient_id', 'doctor_id'], 'required'],
+            [['patient_id', 'doctor_id', 'diagnosis'], 'required'],
             [['patient_id', 'doctor_id', 'pills_number', 'refills_number'], 'integer'],
             [['instruction'], 'string'],
             [['start_period', 'end_period'], 'safe'],

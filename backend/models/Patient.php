@@ -100,4 +100,9 @@ class Patient extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Prescription::className(), ['patient_id' => 'user_id']);
     }
+
+    public function getImages()
+    {
+        return $this->hasMany(Image::className(), ['patient_id' => 'user_id']);
+    }
 }
