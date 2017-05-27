@@ -64,8 +64,11 @@ class Image_backendController extends ActiveController
             $uploadPath = Yii::$app->getBasePath() . "/images/" . $_FILES['file']['name'];
             if (move_uploaded_file($tempPath, $uploadPath)) {
                 $model = new Image();
-                if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                    return;
+                if ($model->load(['Image' => Yii::$app->request->post()])) {
+                    $model->name = $_FILES['file']['name'];
+                    if($model->save()){
+                        return 'saved';
+                    }
                 }
             }
         }

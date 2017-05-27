@@ -48,15 +48,20 @@ angular.module("config", ["ngRoute"])
                     templateUrl:    configs.page+'prescription/prescription.html',
                     controller:     'PrescriptionCtrl'
                 })
+            .when('/practice',
+                {
+                    templateUrl:    configs.page+'practice/practice.html',
+                    controller:     'PracticeCtrl'
+                })
             .when('/radiology',
                 {
                     templateUrl:    configs.page+'radiology/radiology.html',
                     controller:     'RadiologyCtrl'
                 })
-            .when('/radio',
+            .when('/my_consult',
                 {
-                    templateUrl:    configs.page+'radio/radio.html',
-                    controller:     'RadioCtrl'
+                    templateUrl:    configs.page+'my_consult/my_consult.html',
+                    controller:     'My_consultCtrl'
                 })
             .otherwise(
                 {

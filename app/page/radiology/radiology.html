@@ -1,68 +1,95 @@
 
 <div class="container">
     <div>
-        <h1>Prescription:</h1>
-        <form ng-submit="create()" role="form" name="prescriptionForm" method="post">
-            <div ng-class="{ 'has-success': !error['diagnosis'] && submitted,
-                             'has-error': error['diagnosis'] && submitted }"
-                 class="form-group field-diagnosis required">
-                <label class="control-label" for="diagnosis">Diagnosis</label>
-                <input ng-model="prescription.diagnosis"
-                       type="text"
-                       id="diagnosis"
-                       class="form-control">
-                <p class="help-block help-block-error">{{ error['diagnosis'] }}</p>
+        <h1>Radiology:</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="box col-md-4">
+                        <div class="box-inner">
+                            <div class="box-header well" data-original-title="">
+                                <h2>Upload!</h2>
+                            </div>
+                            <div class="box-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Select Your Picture:</label>
+                                    </div>
+                                </div>
+                                <div class="row marg">
+                                    <div class="col-md-12">
+                                        <p>
+                                            <label for="upload" class="btn btn-success">
+                                                <i class="glyphicon glyphicon-circle-arrow-up"></i>
+                                                Select A Picture
+                                            </label>
+                                            <input id="upload" style="display:none;" type='file' file-input="files"  class="input-xlarge" onchange="angular.element(this).scope().imageUpload(event)" />
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row marg">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-info" ng-click="upload()">
+                                            <i class="glyphicon glyphicon-send"></i>
+                                            Upload
+                                        </button>
+                                        <a href="#/home" class="btn btn-default">Cancel</a>
+                                    </div>
+                                    <div class="col-md-6" ng-show="isProcessing">
+                                        <img class="img-thumbnail"  src="images/ajax-loaders/ajax-loader-5.gif" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-inner">
+                            <div class="box-header well" data-original-title="">
+                                <h2>Preview!</h2>
+                            </div>
+                            <div class="box-content">
+                                <div class="row marg">
+                                    <div class="col-md-5 left">
+                                        <h6>Name: {{file.name }}</h6>
+                                    </div>
+                                    <div class="col-md-4 left">
+                                        <h6>Size: {{file.size/1024|number:2 }} KB</h6>
+                                    </div>
+                                    <div class="col-md-3 bottom">
+                                        <h6>Type: {{file.type.slice(file.type.lastIndexOf('/') + 1)}} </h6>
+                                    </div>
+                                </div>
+
+                                <div class="row marg">
+                                    <div class="col-md-12">
+                                        <p>
+                                            <img class="img-thumbnail" style="width:250px; height=250px; "  ng-src="{{step}}" />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="box col-md-8">
+                        <div class="box-inner" style="margin-bottom:4%;">
+                            <div class="box-header well" data-original-title="">
+                                <h2>All patient pictures!</h2>
+                            </div>
+                            <div class="box-content" style="max-height: 500px; overflow:auto;">
+                                <div class="row marg">
+
+                                    <div class="col-md-3" ng-repeat="pic in pics">
+                                        <p>
+                                            <img class="img-thumbnail img" ng-src="../backend/images/{{pic.name}}" />
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-
-            <div ng-class="{ 'has-success': !error['patient_id'] && submitted,
-                             'has-error': error['patient_id'] && submitted }"
-                 class="form-group field-patient_id required">
-                <label class="control-label" for="patient_id">Patient</label>
-                <select ng-model="prescription.patient_id"
-                        id="patient_id"
-                        class="form-control">
-                    <option ng-repeat="(key, value) in patients" value="{{value.id}}">{{value.last_name}} {{value.first_name}}</option>
-                </select>
-
-            </div>
-
-            <div ng-class="{ 'has-success': !error['pharmacy'] && submitted,
-                             'has-error': error['pharmacy'] && submitted }"
-                 class="form-group field-pharmacy required">
-                <label class="control-label" for="pharmacy">Pharmacy</label>
-                <input ng-model="prescription.pharmacy"
-                       type="text"
-                       id="pharmacy"
-                       class="form-control">
-                <p class="help-block help-block-error">{{ error['pharmacy'] }}</p>
-            </div>
-
-            <div ng-class="{ 'has-success': !error['pills_number'] && submitted,
-                             'has-error': error['pills_number'] && submitted }"
-                 class="form-group field-pills_number required">
-                <label class="control-label" for="pills_number">Pills amount</label>
-                <input ng-model="prescription.pills_number"
-                       type="text"
-                       id="pills_number"
-                       class="form-control">
-                <p class="help-block help-block-error">{{ error['pills_number'] }}</p>
-            </div>
-
-            <div ng-class="{ 'has-success': !error['instruction'] && submitted,
-                             'has-error': error['instruction'] && submitted }"
-                 class="form-group field-instruction required">
-                <label class="control-label" for="instruction">Instruction</label>
-                <textarea ng-model="prescription.instruction"
-                          type="text"
-                          id="instruction"
-                          class="form-control">
-                </textarea>
-                <p class="help-block help-block-error">{{ error['instruction'] }}</p>
-            </div>
-
-            <button ng-click="setDoctor();"
-                    type="submit" class="btn btn-primary">Submit</button>
-            <a href="#/home" class="btn btn-default">Cancel</a>
-        </form>
     </div>
 </div>
+

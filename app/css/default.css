@@ -34,3 +34,13 @@
     height:100px;
     cursor: pointer;
 }
+.marg{
+    margin:1%;
+}
+.img_list{
+    width:250px;
+    height:250px;
+}
+.img_preview{
+    margin-bottom:4%;
+}

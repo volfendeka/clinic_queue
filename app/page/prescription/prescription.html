@@ -2,14 +2,17 @@
 <div class="container">
     <p><h3>My Chart:</h3></p>
     <div class="row well">
-        <ul class="col-xs-12 col-md-12" ng-repeat="(key, value) in prescription">
-            <h4>Diagnosis: {{value.diagnosis}}</h4>
-            <h4>Pharmacy: {{value.pharmacy}}</h4>
-            <h4>Pills number: {{value.pills_number}}</h4>
-            <h4>Refills number: {{value.refills_number}}</h4>
-            <h4>Specified instruction: {{value.instruction}}</h4>
-            <h4>Start of prescription treatment: {{value.start_period}}</h4>
-            <h4>End of prescription treatment: {{value.end_period}}</h4>
+        <ul class="col-xs-6 col-md-6" ng-repeat="(key, value) in prescription track by $index">
+            {{$index+1}}
+            <div class="container">
+                <h4>Diagnosis: {{value.diagnosis}}</h4>
+                <h4>Pharmacy: {{value.pharmacy}}</h4>
+                <h4>Pills number: {{value.pills_number}}</h4>
+                <h4>Refills number: {{value.refills_number}}</h4>
+                <h4>Specified instruction: {{value.instruction}}</h4>
+                <h4>Start of prescription treatment: {{value.start_period}}</h4>
+                <h4>End of prescription treatment: {{value.end_period}}</h4>
+            </div>
         </ul>
     </div>
 </div>

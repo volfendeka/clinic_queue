@@ -34,7 +34,7 @@ class Image extends \yii\db\ActiveRecord
     {
         return [
             [['patient_id', 'doctor_id'], 'integer'],
-            [['doctor_id', 'description'], 'required'],
+            [['doctor_id'], 'required'],
             [['description'], 'string'],
             [['name'], 'string', 'max' => 255],
             [['size'], 'string', 'max' => 100],

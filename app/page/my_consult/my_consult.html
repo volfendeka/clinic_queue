@@ -1,0 +1,12 @@
+
+<div class="container">
+    <p><h3>My consultations:</h3></p>
+    <div class="row well">
+
+        <ul class="col-xs-4 col-md-4" ng-repeat="meeting in meetings.meetings">
+            <h5>{{meeting.date_time_meeting}}</h5>
+            <p>{{meeting.doctor.first_name}} {{meeting.doctor.last_name}}</p>
+            <p>{{meeting.doctor.reason}}</p>
+        </ul>
+    </div>
+</div>

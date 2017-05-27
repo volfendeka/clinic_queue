@@ -1,0 +1,68 @@
+{{prescription}}
+<div class="container">
+    <div>
+        <h1>Prescription:</h1>
+        <form ng-submit="create()" role="form" name="prescriptionForm" method="post">
+            <div ng-class="{ 'has-success': !error['diagnosis'] && submitted,
+                             'has-error': error['diagnosis'] && submitted }"
+                 class="form-group field-diagnosis required">
+                <label class="control-label" for="diagnosis">Diagnosis</label>
+                <input ng-model="prescription.diagnosis"
+                       type="text"
+                       id="diagnosis"
+                       class="form-control">
+                <p class="help-block help-block-error">{{ error['diagnosis'] }}</p>
+            </div>
+
+            <div ng-class="{ 'has-success': !error['patient_id'] && submitted,
+                             'has-error': error['patient_id'] && submitted }"
+                 class="form-group field-patient_id required">
+                <label class="control-label" for="patient_id">Patient</label>
+                <select ng-model="prescription.patient_id"
+                        id="patient_id"
+                        class="form-control">
+                    <option ng-repeat="(key, value) in patients" value="{{value.id}}">{{value.last_name}} {{value.first_name}}</option>
+                </select>
+
+            </div>
+
+            <div ng-class="{ 'has-success': !error['pharmacy'] && submitted,
+                             'has-error': error['pharmacy'] && submitted }"
+                 class="form-group field-pharmacy required">
+                <label class="control-label" for="pharmacy">Pharmacy</label>
+                <input ng-model="prescription.pharmacy"
+                       type="text"
+                       id="pharmacy"
+                       class="form-control">
+                <p class="help-block help-block-error">{{ error['pharmacy'] }}</p>
+            </div>
+
+            <div ng-class="{ 'has-success': !error['pills_number'] && submitted,
+                             'has-error': error['pills_number'] && submitted }"
+                 class="form-group field-pills_number required">
+                <label class="control-label" for="pills_number">Pills amount</label>
+                <input ng-model="prescription.pills_number"
+                       type="text"
+                       id="pills_number"
+                       class="form-control">
+                <p class="help-block help-block-error">{{ error['pills_number'] }}</p>
+            </div>
+
+            <div ng-class="{ 'has-success': !error['instruction'] && submitted,
+                             'has-error': error['instruction'] && submitted }"
+                 class="form-group field-instruction required">
+                <label class="control-label" for="instruction">Instruction</label>
+                <textarea ng-model="prescription.instruction"
+                          type="text"
+                          id="instruction"
+                          class="form-control">
+                </textarea>
+                <p class="help-block help-block-error">{{ error['instruction'] }}</p>
+            </div>
+
+            <button ng-click="setDoctor();"
+                    type="submit" class="btn btn-primary">Submit</button>
+            <a href="#/home" class="btn btn-default">Cancel</a>
+        </form>
+    </div>
+</div>
