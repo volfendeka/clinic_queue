@@ -55,13 +55,13 @@ class Patient_backendController extends ActiveController
         return $behaviors;
     }
 
-    public function actionGet_patient($id = '', $date = false)
+    public function actionGet_patient($id = '', $date = 0)
     {
         return Patient::find()
                         ->where(['user_id' => $id])
                         ->joinWith(['userId'=> function($query){$query->select(['email']);}])
                         ->joinWith(['familyDoctor'=> function($query){$query->select(['first_name', 'last_name']);}])
-                        ->joinWith(['meetings'=> function($query) use (&$date){$query->with(['doctor'])->where(['>', 'date_time_meeting', $date ? date("Y-m-d H:i:s", time()) : '']);}])
+                        ->joinWith(['meetings'=> function($query) use (&$date){$query->with(['doctor'])->where(['>', 'date_time_meeting', $date == 1 ? date("Y-m-d H:i:s", time()) : '']);}])
                         ->asArray()
                         ->one();
     }
