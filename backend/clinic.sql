@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 27, 2017 at 06:50 PM
+-- Generation Time: Jun 05, 2017 at 05:10 PM
 -- Server version: 5.7.18-0ubuntu0.16.04.1
 -- PHP Version: 7.0.15-0ubuntu0.16.04.4
 
@@ -64,9 +64,9 @@ CREATE TABLE `image` (
   `id` int(11) NOT NULL,
   `patient_id` int(11) DEFAULT NULL,
   `doctor_id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `size` varchar(100) DEFAULT NULL,
-  `description` text NOT NULL
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `size` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -74,8 +74,18 @@ CREATE TABLE `image` (
 --
 
 INSERT INTO `image` (`id`, `patient_id`, `doctor_id`, `name`, `size`, `description`) VALUES
-(1, 2, 1, 'avatar.jpg', 'svcd', 'vsd'),
-(2, 2, 3, 'KD2PExwBrnI.jpg', '1212', 'vcz');
+(11, 2, 2, 'pet-scan-cross-sections.jpg', NULL, NULL),
+(12, 2, 2, 'radio.jpg', NULL, NULL),
+(13, 2, 2, 'Radiology-1.jpg', NULL, NULL),
+(14, 2, 2, 'καρδιά1.jpg', NULL, NULL),
+(15, 2, 2, 'images (1).jpg', NULL, NULL),
+(16, 2, 2, 'images.jpg', NULL, NULL),
+(17, 2, 2, 'hqdefault.jpg', NULL, NULL),
+(18, 2, 2, 'qw.png', NULL, NULL),
+(19, 2, 2, 'rfeshkNY9Zw.jpg', NULL, NULL),
+(20, 2, 2, 'rfeshkNY9Zw.jpg', NULL, NULL),
+(21, 2, 2, 'rfeshkNY9Zw.jpg', NULL, NULL),
+(22, 2, 2, 'rfeshkNY9Zw.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -107,7 +117,12 @@ INSERT INTO `meeting` (`id`, `doctor_id`, `patient_id`, `date_time_meeting`, `da
 (89, 3, 2, '2017-05-29 10:00:00', '2017-05-26 23:50:57', 'kjbn'),
 (90, 3, 2, '2017-05-29 11:00:00', '2017-05-26 23:51:32', 'kl;m,'),
 (91, 3, 2, '2017-05-29 09:00:00', '2017-05-26 23:51:55', 'kl;m,'),
-(92, 5, 2, '2017-05-30 14:00:00', '2017-05-27 11:10:47', 'sdv');
+(92, 5, 2, '2017-05-30 14:00:00', '2017-05-27 11:10:47', 'sdv'),
+(93, 2, 22, '2017-06-01 10:00:00', '2017-05-31 17:16:03', 'sd'),
+(94, 4, 2, '2017-06-01 14:00:00', '2017-05-31 17:54:26', 'acs'),
+(95, 12, 2, '2017-06-08 09:00:00', '2017-06-05 12:24:21', 'dsac'),
+(96, 1, 2, '2017-06-08 09:00:00', '2017-06-05 12:24:49', 'dsac'),
+(97, 6, 2, '2017-06-30 10:00:00', '2017-06-05 15:34:44', 'wads');
 
 -- --------------------------------------------------------
 
@@ -169,7 +184,8 @@ CREATE TABLE `prescription` (
 INSERT INTO `prescription` (`id`, `patient_id`, `doctor_id`, `diagnosis`, `pharmacy`, `pills_number`, `refills_number`, `instruction`, `start_period`, `end_period`) VALUES
 (1, 22, 1, 'flue', 'farmacy', 2, 2, '1 pill per day', NULL, NULL),
 (2, 2, 2, 'hcf', 'v h', 4, NULL, 'cv vn', NULL, NULL),
-(3, 2, 2, 'ujvbjn', NULL, NULL, NULL, NULL, NULL, NULL);
+(3, 2, 2, 'ujvbjn', NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 2, 2, 'svd', 'vs', NULL, NULL, 'sv', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -262,12 +278,12 @@ ALTER TABLE `doctor`
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `meeting`
 --
 ALTER TABLE `meeting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 --
 -- AUTO_INCREMENT for table `patient`
 --
@@ -277,7 +293,7 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `prescription`
 --
 ALTER TABLE `prescription`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `user`
 --
